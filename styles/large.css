@@ -75,6 +75,10 @@
     gap: 1%;
    
    }
+  .container {
+      margin: auto;
+      margin-bottom: 10px;
+  }
   
    
 
