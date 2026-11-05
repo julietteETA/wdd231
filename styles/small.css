@@ -155,7 +155,7 @@ footer {
 
 .main {
     display: grid;
-    grid-template-rows:  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: space-around;
     gap: 5%;
@@ -181,7 +181,7 @@ footer {
 h2 {
     background-color: var(--color3);
     box-shadow: 0 0 30px var(--color2);
-   
+    te
 }
 
 
@@ -192,32 +192,37 @@ h2 {
     justify-content: space-around;
     padding-top: 2%;
 }
-.course{
+
+.course {
     display: grid;
     grid-template-rows: 1fr 1fr;
 
 }
+
 /* courses navigation design*/
 .nav {
     padding-top: 3%;
 }
+
 .navigate {
     display: flex;
     justify-content: space-around;
-   
 
-    
+
+
 
 
 }
-.li{
-color: white;
-padding: 4%;
-border-radius: 15%;
-background-color: var(--color4);
+
+.li {
+    color: white;
+    padding: 4%;
+    border-radius: 15%;
+    background-color: var(--color4);
 }
+
 .li:hover {
-    
+
     color: white;
     background-color: var(--color3);
     font-weight: bolder;
@@ -226,6 +231,7 @@ background-color: var(--color4);
     text-decoration: none;
 
 }
+
 /* Javascript course*/
 .container {
     display: grid;
@@ -235,16 +241,19 @@ background-color: var(--color4);
     padding-top: 10px;
     align-items: center;
 }
+
 .course-completion {
-    padding:15px;
+    padding: 15px;
     border-radius: 6px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
+
 .course-completion.completed {
-    background-color:var(--color1); 
-    
+    background-color: var(--color1);
+
 }
+
 .course-completion.not-completed {
     background-color: var(--color4);
     border: 2px solid #cbd5e1;
@@ -257,7 +266,7 @@ footer {
 
     display: flex;
     flex-direction: column;
-    
+
 
 }
 
