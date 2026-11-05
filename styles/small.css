@@ -1,0 +1,226 @@
+/* General style*/
+* {
+    margin: 0;
+    padding: 0 auto;
+    width: auto;
+    height: auto;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100px;
+}
+
+.img {
+    width: 40%;
+    padding: 5%;
+}
+
+.svg {
+    width: auto;
+    height: auto;
+}
+
+
+
+:root {
+    --color1: #2d3dd1;
+    --color3: #3382f0;
+    --color4: #abb1d5;
+    --color2: #010101;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 401;
+    font-style: normal;
+    text-align: center;
+}
+
+header {
+    background-color: var(--color1);
+    border: 1px solid var(--color2);
+    box-shadow: 10px 10px 30px var(--color2);
+
+
+}
+
+h1 {
+    text-shadow: 2px 2px 4px white;
+    font-size: 48px;
+
+}
+
+header,
+main,
+footer {
+    width: auto;
+    margin: 1rem;
+
+
+}
+
+/* 1. Home page design*/
+
+/* Special style for the HEADER*/
+
+.title {
+    display: flex;
+    align-items: center;
+    flex: 1 1 100%;
+
+}
+
+/*Tag design*/
+
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0%;
+
+    background-color: var(--color3);
+
+
+}
+
+.navigation li {
+    display: none;
+
+
+}
+
+
+
+
+
+
+.navigation a {
+    display: flex;
+    color: var(--color2);
+    padding: 1rem 1rem 1rem 1rem;
+    text-decoration: underline;
+    font-size: larger;
+
+}
+
+.navigation a:hover {
+    color: white;
+    background-color: var(--color2);
+    font-weight: bolder;
+    border: 1px solid var(--color1);
+    transition-duration: 0.5s;
+    text-decoration: none;
+
+}
+
+.active {
+    font-weight: bolder;
+}
+
+.active::before {
+    content: "🏠";
+
+}
+
+/*Hamburger effect in the header */
+#menu {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    border: 0;
+    color: var(--color2);
+
+
+}
+
+#menu::before {
+
+    content: "☰";
+
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+.show li {
+    display: block;
+
+}
+
+/* Main styling*/
+
+.main {
+    display: grid;
+    grid-template-rows:  1fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5%;
+
+}
+
+.section2 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20%;
+}
+
+.about {
+    background-color: var(--color4);
+}
+
+.profile {
+    background-color: var(--color4);
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+
+}
+
+h2 {
+    background-color: var(--color3);
+    box-shadow: 0 0 30px var(--color2);
+}
+
+h3 {
+    background-color: var(--color1);
+    padding: 3% 10% 5% 10%;
+    margin-top: 2%;
+    border-radius: 15%;
+
+}
+
+.courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 2%;
+}
+
+h4 {
+    background-color: var(--color3);
+    padding: 2% 2% 2% 1%;
+    margin: 1%;
+    border-radius: 5%;
+}
+
+/* Footer*/
+
+footer {
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer {
+    background-color: var(--color1);
+}
