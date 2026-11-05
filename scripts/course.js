@@ -9,7 +9,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -22,7 +22,7 @@ const courses = [
             'HTML',
             'CSS'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -34,7 +34,7 @@ const courses = [
         technology: [
             'Python'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'CSE',
@@ -60,7 +60,7 @@ const courses = [
             'CSS',
             'JavaScript'
         ],
-        completed: false
+        completed: true
     },
     {
         subject: 'WDD',
@@ -89,18 +89,29 @@ function displayCourses(courses) {
     {
         const courseIncluded = document.createElement("div");
         //Add a style
-        courseIncluded.style.backgroundColor = "#abb1d5";
+
+        //Completed or not 
+        courseIncluded.classList.add("course-completion");
+        if (course.completed === true) {
+            courseIncluded.classList.add("completed");
+        } else {
+            courseIncluded.classList.add("not-completed");
+        }
 
 
         courseIncluded.innerHTML = `
             
             <h3>${course.subject}${course.number}</h3>`;
+        //Credits of course 
         const totalCredits = courses.reduce((sum, course) => sum + course.credits, 0);
         document.getElementById("currentNumber").textContent = ` ${totalCredits}`;
+        
         container.appendChild(courseIncluded);
+        
 
 
     });
+    
     
 
 }
@@ -111,6 +122,7 @@ function displayCourses(courses) {
 
 document.querySelector("#all").addEventListener("click", () => displayCourses(courses));
 displayCourses(courses);
+
 
 
 

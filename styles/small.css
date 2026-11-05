@@ -26,7 +26,7 @@ img {
 :root {
     --color1: #2d3dd1;
     --color3: #3382f0;
-    --color4: #abb1d5;
+    --color4: #b9bdd5;
     --color2: #010101;
 }
 
@@ -234,6 +234,20 @@ background-color: var(--color4);
     margin: 5%;
     padding-top: 10px;
     align-items: center;
+}
+.course-completion {
+    padding:15px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+.course-completion.completed {
+    background-color:var(--color1); 
+    
+}
+.course-completion.not-completed {
+    background-color: var(--color4);
+    border: 2px solid #cbd5e1;
 }
 
 
