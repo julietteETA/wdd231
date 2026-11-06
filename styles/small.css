@@ -1,7 +1,7 @@
 /* General style*/
 * {
     margin: 0;
-    padding: 0 auto;
+    padding: 0 ;
     width: auto;
     height: auto;
     box-sizing: border-box;
@@ -39,7 +39,7 @@ body {
 }
 
 header {
-    background-color: var(--color1);
+    background-color: var(--color3);
     border: 1px solid var(--color2);
     box-shadow: 10px 10px 30px var(--color2);
 
@@ -47,7 +47,7 @@ header {
 }
 
 h1 {
-    text-shadow: 2px 2px 4px white;
+   
     font-size: 48px;
 
 }
@@ -107,7 +107,7 @@ footer {
 }
 
 .navigation a:hover {
-    color: white;
+    color:var(--color4);
     background-color: var(--color2);
     font-weight: bolder;
     border: 1px solid var(--color1);
@@ -181,7 +181,7 @@ footer {
 h2 {
     background-color: var(--color3);
     box-shadow: 0 0 30px var(--color2);
-    te
+    
 }
 
 
@@ -215,7 +215,7 @@ h2 {
 }
 
 .li {
-    color: white;
+    color: var(--color4);
     padding: 4%;
     border-radius: 15%;
     background-color: var(--color4);
@@ -223,7 +223,7 @@ h2 {
 
 .li:hover {
 
-    color: white;
+    color: var(--color4);
     background-color: var(--color3);
     font-weight: bolder;
     border: 1px solid var(--color1);
@@ -256,7 +256,7 @@ h2 {
 
 .course-completion.not-completed {
     background-color: var(--color4);
-    border: 2px solid #cbd5e1;
+    
 }
 
 
@@ -271,5 +271,5 @@ footer {
 }
 
 .footer {
-    background-color: var(--color1);
+    background-color: var(--color3);
 }
