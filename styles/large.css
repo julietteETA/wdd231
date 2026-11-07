@@ -1,22 +1,28 @@
 @media(min-width: 1200px) {
 
+    /* Desktop: Switch layout structure to flow horizontally side-by-side */
+       
+    
+       
    
     header {
         grid-template-columns: 1fr 1fr;
-        align-items: center;
-        justify-content: space-around;
-        gap: 1rem;
+        
+        justify-content:space-around;
+        
+        
+   
 
+    }
         .svg {
-            width: 10%;
+            width: 5%;
             height: auto;
         }
 
-    }
-
     h1 {
-        font-size: 48px;
+        font-size: 24px;
         text-shadow: none;
+       
         
         
             
@@ -24,6 +30,7 @@
 
 
     .navigation {
+        display: flex;
         flex-direction: row;
         justify-content: stretch;
         text-align: center;
@@ -38,6 +45,7 @@
     .navigation li {
         display: flex;
         flex: 1 1 auto;
+        
 
 
 
@@ -54,18 +62,13 @@
     #menu {
         display: none;
     }
-    .main{
-       display: grid;
-       grid-template-rows: 1fr auto;
-       gap: 5%;
-       
         
-    }
-        h2 {
-            background-color: var(--color3);
-            box-shadow: none;
-        }
+    .main{
+        display: block;
+        gap: 0%;
 
+    }
+       
    .section2{
     display: grid;
     grid-template-columns: 3fr 1fr;
