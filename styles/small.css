@@ -13,7 +13,7 @@ img {
 }
 
 .img {
-    width: 15%;
+    width: 10%;
     padding: 3%;
     padding-top: 1%;
     
@@ -163,7 +163,7 @@ footer {
 
 .main {
     display:grid;
-        grid-template-rows:  200px 200px ;
+        grid-template-rows:  140px 200px ;
         align-items: center;
         justify-content: space-around;
         gap: 5%;
@@ -174,7 +174,7 @@ footer {
 
 .section2 {
     display: grid;
-    grid-template-rows: 80px 70px;
+    grid-template-rows: 90px 50px;
 
     gap: 5%;
 }
@@ -185,6 +185,10 @@ footer {
 
 .profile {
     background-color: var(--color4);
+}
+.option{
+    display:grid;
+    grid-template-rows: 140px 10px;
 }
 
 
@@ -238,7 +242,7 @@ h2 {
 }
 .course {
  display: grid;  
- grid-template-rows: 30px 100px 80px; 
+ grid-template-rows: 30px 160px; 
 }
 
 /* Javascript course*/
@@ -284,6 +288,7 @@ footer {
 
     display: flex;
     flex-direction: column;
+    
    
     
 
@@ -291,5 +296,5 @@ footer {
 }
 
 .footer {
-    background-color: var(--color4);
+    background-color:var(--color4);
 }

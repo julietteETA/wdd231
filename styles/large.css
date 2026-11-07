@@ -1,12 +1,12 @@
 @media(min-width: 1200px) {
 
     /* Desktop: Switch layout structure to flow horizontally side-by-side */
-       
+     
     
        
    
     header {
-        grid-template-columns: 100px 50px;
+        grid-template-columns: 50px 50px;
         
         justify-content:space-around;
         
@@ -43,7 +43,7 @@
 
 
 
-
+        
 
 
     }
@@ -71,24 +71,29 @@
         
     .main{
         display: grid;
-            grid-template-rows: 150px 30px;
+            grid-template-rows: 170px 10px;
             align-items: center;
             justify-content: space-around;
-            gap: 20%;
+            gap: 1%;
 
     }
         .navigate a {
             
-            padding: 2rem;
+            padding: 1rem;
             font-size: large;
             border-radius: 15%;
             background-color: var(--color4);
     
         }
+    .option{
+        display: block;
+        
+    }
        
    .section2{
     display: grid;
     grid-template-columns: 3fr  200px;
+    margin-bottom: 0%;
     justify-content: center;
     justify-self: normal;
     gap: 1%;
@@ -96,7 +101,7 @@
    }
    .course {
        display: grid;
-       grid-template-rows: 80px 50px 90px;
+       grid-template-rows: 50px 30px ;
    }
   .container {
       margin: auto;
@@ -105,8 +110,8 @@
   
    
 
-   footer{
-    margin-top: 5%;
+   footer {
+       margin-top: 6%;
    }
 
 }
