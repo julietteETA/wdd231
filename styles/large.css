@@ -6,7 +6,7 @@
        
    
     header {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 100px 50px;
         
         justify-content:space-around;
         
@@ -18,6 +18,9 @@
             width: 5%;
             height: auto;
         }
+        .img{
+            width: 35%;
+        }
 
     h1 {
         font-size: 24px;
@@ -27,6 +30,9 @@
         
             
     }
+        .nav {
+            padding-top: 1%;
+        }
 
 
     .navigation {
@@ -64,19 +70,33 @@
     }
         
     .main{
-        display: block;
-        gap: 0%;
+        display: grid;
+            grid-template-rows: 150px 30px;
+            align-items: center;
+            justify-content: space-around;
+            gap: 20%;
 
     }
+        .navigate a {
+            
+            padding: 2rem;
+            font-size: large;
+            border-radius: 15%;
+            background-color: var(--color4);
+    
+        }
        
    .section2{
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 3fr  200px;
     justify-content: center;
     justify-self: normal;
-    align-items: center;
     gap: 1%;
    
+   }
+   .course {
+       display: grid;
+       grid-template-rows: 80px 50px 90px;
    }
   .container {
       margin: auto;
