@@ -2,8 +2,6 @@
 * {
     margin: 0;
     padding: 0 ;
-    width: auto;
-    height: auto;
     box-sizing: border-box;
 }
 
@@ -25,9 +23,10 @@ img {
 
 :root {
     --color1: #2d3dd1;
-    --color3: #3382f0;
     --color4: #b9bdd5;
     --color2: #010101;
+    --color: #ffffff;
+    
 }
 
 body {
@@ -39,7 +38,7 @@ body {
 }
 
 header {
-    background-color: var(--color3);
+    background-color: var(--color4);
     border: 1px solid var(--color2);
     box-shadow: 10px 10px 30px var(--color2);
 
@@ -48,7 +47,7 @@ header {
 
 h1 {
    
-    font-size: 48px;
+    font-size: 24px;
 
 }
 
@@ -81,7 +80,7 @@ footer {
     align-items: flex-start;
     padding-left: 0%;
 
-    background-color: var(--color3);
+    background-color: var(--color4);
 
 
 }
@@ -158,14 +157,14 @@ footer {
     grid-template-rows: 1fr 1fr;
     align-items: center;
     justify-content: space-around;
-    gap: 5%;
+    
 
 }
 
 .section2 {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 20%;
+    gap: 5%;
 }
 
 .about {
@@ -179,9 +178,9 @@ footer {
 
 
 h2 {
-    background-color: var(--color3);
+    background-color: var(--color4);
     box-shadow: 0 0 30px var(--color2);
-    
+    font-size: 16px;
 }
 
 
@@ -193,38 +192,37 @@ h2 {
     padding-top: 2%;
 }
 
-.course {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-
-}
 
 /* courses navigation design*/
 .nav {
-    padding-top: 3%;
+    padding-top: 4%;
 }
 
 .navigate {
     display: flex;
     justify-content: space-around;
 
-
-
-
-
 }
 
-.li {
-    color: var(--color4);
-    padding: 4%;
-    border-radius: 15%;
+.navigate a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--color2);
+    padding: 1rem;
+    font-size: larger;
+    border-radius: 15% ;
     background-color: var(--color4);
+   
+}
+.li {
+    color: var(--color);   
 }
 
-.li:hover {
+.navigate a:hover {
 
-    color: var(--color4);
-    background-color: var(--color3);
+    background-color: var(--color);
     font-weight: bolder;
     border: 1px solid var(--color1);
     transition-duration: 0.5s;
@@ -250,7 +248,16 @@ h2 {
 }
 
 .course-completion.completed {
-    background-color: var(--color1);
+    background-color: var(--color);
+    border:1px solid var(--color1);
+    color: var(--color1);
+    
+
+}
+ .course-completion.completed::before{
+    content: "✔️";
+    position: absolute;
+    padding-left: 7%;
 
 }
 
@@ -271,5 +278,5 @@ footer {
 }
 
 .footer {
-    background-color: var(--color3);
+    background-color: var(--color4);
 }
