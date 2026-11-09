@@ -142,6 +142,6 @@ document.querySelector("#cse").addEventListener("click", () => {
 document.querySelector("#wdd").addEventListener("click", () => {
     const wddCourses = courses.filter(course => course.subject === 'WDD');
     displayCourses(wddCourses);
-    const totalWddCredits = wddCoursesCourses.reduce((sum, course) => sum + course.credits, 0);
+    const totalWddCredits = wddCourses.reduce((sum, course) => sum + course.credits, 0);
     document.getElementById("currentNumber").textContent = ` ${totalWddCredits}`;
 });
