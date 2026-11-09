@@ -11,3 +11,23 @@ h2 {
     margin: 1rem 0;
     text-shadow: 0 0 30px #111;
 }
+
+.portrait {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 1rem;
+    padding: 1rem;
+  
+    align-items: center;
+
+}
+#cards{
+
+background-color: antiquewhite;}
+img{
+    width: 50%;
+    height: auto;
+    border-radius: 15%;
+    border-color: black;
+}

@@ -3,10 +3,11 @@ const cards = document.querySelector('#cards');
 async function getProphetData() {
     const response = await fetch(url);
     const data = await response.json();
-    console.table(data.prophets); // temporary testing of data response
+    //console.table(data.prophets); // temporary testing of data response
+    displayProphets(data.prophets);
 }
 
-getProphetData();
+
 
 const displayProphets = (prophets) => {
     prophets.forEach((prophet) => {
@@ -16,10 +17,10 @@ const displayProphets = (prophets) => {
         const portrait = document.createElement('img');
 
         // Build the h2 content out to show the prophet's full name
-        fullName.textContent = `${prophet.name}${prophet.lastname}`; // fill in the blank
+        fullName.textContent = `${prophet.name} ${prophet.lastname}`; // fill in the blank
         // Build the image portrait by setting all the relevant attributes
         portrait.setAttribute('src', prophet.imageurl);
-        portrait.setAttribute('alt', `Portrait of ${prophet.birthdate} ${prophet.death}`); // fill in the blank
+        portrait.setAttribute('alt', `Portrait of ${prophet.name} ${prophet.lastname}`); // fill in the blank
         portrait.setAttribute('loading', 'lazy');
         portrait.setAttribute('width', '340');
         portrait.setAttribute('height', '440');
@@ -28,7 +29,7 @@ const displayProphets = (prophets) => {
         card.appendChild(fullName); // fill in the blank
         card.appendChild(portrait);
 
-        cards.appendChild(card);    
-    }); 
+        cards.appendChild(card);
+    });
 }
-displayProphets();
+getProphetData();
