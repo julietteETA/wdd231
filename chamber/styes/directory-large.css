@@ -1,0 +1,52 @@
+@media (min-width: 740px) {
+    header {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+
+
+
+    }
+
+
+    .navigation {
+        flex-direction: row;
+        justify-content: stretch;
+        text-align: center;
+
+
+
+
+
+
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+    }
+
+    .navigation a {
+        flex: 1 1 100%;
+
+    }
+
+    #menu {
+        display: none;
+    }
+
+    img {
+        width: 80%;
+        height: auto;
+        float: inherit;
+    }
+
+    .container {
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+
+}
