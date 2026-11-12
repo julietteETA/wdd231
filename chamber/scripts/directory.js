@@ -46,7 +46,7 @@ const displayMembers = (members) => { members.forEach((member) =>{
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>URL:</strong> ${member.url}</p>
             <p><strong>Level:</strong> ${member.membershipLevel}</p>
-            <img src="${ member.imageUrl} " alt="${member.businessName } " loading="lazy" >;
+            <img src="${ member.imageUrl} " alt="${member.businessName } logo " loading="lazy" >
             `;
         
         container.appendChild(cardFiltered);
