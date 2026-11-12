@@ -21,13 +21,13 @@ hamButton.addEventListener("click", () => {
     hamButton.classList.toggle("show");
 });
 // Using a Json and fetch method and json data
-const doc = "members.json";
-const cards = document.querySelector('#cards');
-async function getProphetData() {
+const url = "https://julietteeta.github.io/wdd231/chamber/data/members.json";
+const cards = document.querySelector('#image');
+async function getMembers() {
     const response = await fetch(url);
     const data = await response.json();
-    //console.table(data.prophets); // temporary testing of data response
-    displayProphets(data.prophets);
+    //console.table(data.members); // temporary testing of data response
+    displayProphets(data.m);
 }
 
 
