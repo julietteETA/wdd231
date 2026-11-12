@@ -59,16 +59,27 @@ getMembers();
 
 
 
-// grid – display all the businesses as a grid
-document.querySelector("#grid").addEventListener("click", () => { displayBusinesses (businesses);
-    displayBusinesses(businesses);
+// Menu grid and list
+
+const gridButton = document.querySelector("#grid");
+const listButton = document.querySelector("#list");
+const display = document.querySelector("article");
+
+
+
+gridButton.addEventListener("click", () => {
+    // example using arrow function
+    display.classList.add("grid");
+    display.classList.remove("list");
 });
 
+listButton.addEventListener("click", showList); 
 
+function showList() {
+    display.classList.add("list");
+    display.classList.remove("grid");
+}
 
-// list– displays all the businesses as a list.
-document.querySelector("#home").addEventListener("click", () => displayBusinesses(businesses));
-displayBusinesses(businesses);
 
 
 
