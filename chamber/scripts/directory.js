@@ -20,24 +20,31 @@ hamButton.addEventListener("click", () => {
     nav.classList.toggle("show");
     hamButton.classList.toggle("show");
 });
+
+
+
 // Using a Json and fetch method and json data
 const url = "https://julietteeta.github.io/wdd231/chamber/data/members.json";
 const container = document.querySelector('#image');
 async function getMembers() {
     const response = await fetch(url);
     const data = await response.json();
-    //console.table(data.members); // temporary testing of data response
+    //display grid by default
     displayMembers(data.members);
 }
 
 
+
+// 1. GRID VIEW: Shows full cards with images and details
 //Select the container element
-const displayMembers = (members) => { members.forEach((member) =>{
-    const cardFiltered = document.createElement("div");
+
+const displayMembers = (members) => {
+    members.forEach((member) => {
+        const cardFiltered = document.createElement("div");
         //Add a style
         cardFiltered.style.backgroundColor = "#f0ebeb";
 
-    cardFiltered.innerHTML = `
+        cardFiltered.innerHTML = `
       
             <h3>${member.businessName}</h3>
             <p>${member.businessTagLine}</p>
@@ -47,20 +54,100 @@ const displayMembers = (members) => { members.forEach((member) =>{
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>URL:</strong> ${member.url}</p>
             <p><strong>Level:</strong> ${member.membershipLevel}</p>
-            <img src="${member.imageUrl}" alt="${member.businessName } logo " loading="lazy" >
+            <img src="${member.imageUrl}" alt="${member.businessName} logo " loading="lazy" >
             `;
-        
+
         container.appendChild(cardFiltered);
 
 
-});
-    
+    });
+
 }
+
+    ;
 getMembers();
 
+
 //Grid and list button 
-//Grid button 
-hamButton.addEventListener("click", () => {
-    nav.classList.toggle("show");
-    hamButton.classList.toggle("show");
-});
+
+const gridBtn = document.querySelector('#grid'); 
+const listBtn = document.querySelector('#list'); 
+
+let membersData = [];
+
+async function getMembers() {
+    const response = await fetch(url);
+    const data = await response.json();
+    membersData = data.members;
+
+    // Show Grid View by default
+    displayGrid(membersData);
+}
+
+// 1. GRID VIEW: Shows full cards with images and details
+const displayGrid = (members) => {
+    container.innerHTML = ""; 
+    container.classList.add('grid');
+    container.classList.remove('list');
+
+    members.forEach((member) => {
+        const cardFiltered = document.createElement("div");
+        cardFiltered.classList.add("member-card");
+        cardFiltered.style.backgroundColor = "#f0ebeb";
+
+        // Handles the extra space in Kin Transport's " url" key
+        const memberUrl = member.url || member[" url"] || "";
+
+        cardFiltered.innerHTML = `
+            <h3>${member.businessName}</h3>
+            <p>${member.businessTagLine}</p>
+            <p><strong>Email:</strong> ${member.email}</p>
+            <p><strong>Phone:</strong> ${member.phone}</p>
+            <p><strong>URL:</strong> <a href="https://${memberUrl}" target="_blank">${memberUrl}</a></p>
+            <p><strong>Level:</strong> ${member.membershipLevel}</p>
+            <img src="${member.imageUrl}" alt="${member.businessName} logo" loading="lazy">
+        `;
+
+        container.appendChild(cardFiltered);
+    });
+};
+
+// 2. LIST VIEW: Looks like a table with Company Name, URL, and Phone Number
+const displayList = (members) => {
+    container.innerHTML = ""; // Clear container
+    container.classList.add('list');
+    container.classList.remove('grid');
+
+    // Create Table Header
+    const headerRow = document.createElement("div");
+    headerRow.classList.add("table-header");
+    headerRow.innerHTML = `
+        <span>Company Name</span>
+        <span>URL</span>
+        <span>Phone Number</span>
+    `;
+    container.appendChild(headerRow);
+
+    // Create Table Rows
+    members.forEach((member) => {
+        const row = document.createElement("div");
+        row.classList.add("table-row");
+
+        const memberUrl = member.url || member[" url"] || "";
+
+        row.innerHTML = `
+            <span class="company-name">${member.businessName}</span>
+            <a class="company-url" href="https://${memberUrl}" target="_blank">${memberUrl}</a>
+            <span class="company-phone">${member.phone}</span>
+        `;
+
+        container.appendChild(row);
+    });
+};
+
+// Button Click Listeners
+gridBtn.addEventListener('click', () => displayGrid(membersData));
+listBtn.addEventListener('click', () => displayList(membersData));
+
+// Load data
+getMembers();

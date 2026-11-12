@@ -168,9 +168,8 @@ main {
 
 }
 
-.container :hover {
-    box-shadow: 0 0 50px var(--color-var);
-}
+
+
 
 img {
     width: 50%;
@@ -186,10 +185,10 @@ img {
 }
 .grid{
    width: 20%;
+    
     }
 .grid:hover{
-    background-color: var(--color-var);
-    color: var(--color1);
+    
     font-weight:bolder ;
     transition: 1s;
 }
@@ -197,8 +196,7 @@ img {
 width: 20%;
 }
 .list:hover {
-    background-color: var(--color-var);
-    color: var(--color1);
+    
     font-weight: bolder;
     transition: 1s;
 }
@@ -230,6 +228,76 @@ p {
     padding-bottom: 5px;
 }
 
+/* ===========================
+   GRID VIEW (Cards)
+   =========================== */
+
+
+#image.grid .member-card {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#image.grid .member-card img {
+    max-width: 120px;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* ===========================
+   LIST VIEW (Table Layout)
+   =========================== */
+#image.list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+#image.list .table-header,
+#image.list .table-row {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1.5fr;
+    /* 3 aligned table columns */
+    padding: 12px 16px;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#image.list .table-header {
+    background-color:var(--color3);
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Alternating row background matching your #f0ebeb */
+#image.list .table-row:nth-child(even) {
+    background-color: #f0ebeb;
+}
+
+#image.list .table-row:nth-child(odd) {
+    background-color: var(--color1);
+}
+
+#image.list .table-row:last-child {
+    border-bottom: none;
+}
+
+.company-name {
+    font-weight: bold;
+}
+
+.company-url {
+    color: var(--color-var);
+    text-decoration: none;
+}
+
+.company-url:hover {
+    text-decoration: underline;
+}
 
 /*3. Footer design*/
 
