@@ -37,16 +37,17 @@ const displayMembers = (members) => { members.forEach((member) =>{
         //Add a style
         cardFiltered.style.backgroundColor = "#f0ebeb";
 
-        cardFiltered.innerHTML = `
+    cardFiltered.innerHTML = `
+      
             <h3>${member.businessName}</h3>
             <h4>${member.businessTagLine}</h4>
-            
+           
     
             <p><strong>Email:</strong> ${member.email}</p>
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>URL:</strong> ${member.url}</p>
             <p><strong>Level:</strong> ${member.membershipLevel}</p>
-            <img src="${ member.imageUrl} " alt="${member.businessName } logo " loading="lazy" >
+            <img src="${member.imageUrl}" alt="${member.businessName } logo " loading="lazy" >
             `;
         
         container.appendChild(cardFiltered);
@@ -59,26 +60,7 @@ getMembers();
 
 
 
-// Menu grid and list
 
-const gridButton = document.querySelector("#grid");
-const listButton = document.querySelector("#list");
-const display = document.querySelector("article");
-
-
-
-gridButton.addEventListener("click", () => {
-    // example using arrow function
-    display.classList.add("grid");
-    display.classList.remove("list");
-});
-
-listButton.addEventListener("click", showList); 
-
-function showList() {
-    display.classList.add("list");
-    display.classList.remove("grid");
-}
 
 
 

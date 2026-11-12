@@ -180,6 +180,29 @@ img {
 
 
 }
+/*Grid and list*/
+.menu{
+    margin: 1rem;
+}
+.grid{
+   width: 20%;
+    }
+.grid:hover{
+    background-color: var(--color-var);
+    color: var(--color1);
+    font-weight:bolder ;
+}
+.list{
+width: 20%;
+}
+.list:hover {
+    background-color: var(--color-var);
+    color: var(--color1);
+    font-weight: bolder;
+}
+
+
+
 
 
 
