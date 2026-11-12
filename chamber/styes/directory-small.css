@@ -232,7 +232,16 @@ p {
 /*3. Footer design*/
 
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+img{
+    margin: 5%;
+    
+}
 #lastmodified {
     color: var(--color2);
 }

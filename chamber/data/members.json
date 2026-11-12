@@ -1,12 +1,13 @@
-  
-    {"members" : [ {
+{
+    "members": [
+        {
             "businessName": "English Test Assistance",
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
             "imageUrl": "https://churchofjesuschristtemples.org/assets/img/temples/kinshasa-democratic-republic-of-the-congo-temple/kinshasa-democratic-republic-of-the-congo-temple-3526-thumb.jpg",
-            "membershipLevel":"3"
+            "membershipLevel": "3"
         },
         {
             "businessName": "Fishy",
@@ -79,6 +80,6 @@
             "url": "myBusiness.com",
             "imageUrl": "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg",
             "membershipLevel": "3"
-        }  
-        ]
-    }
+        }
+    ]
+}

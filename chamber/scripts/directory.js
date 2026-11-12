@@ -40,7 +40,7 @@ const displayMembers = (members) => { members.forEach((member) =>{
     cardFiltered.innerHTML = `
       
             <h3>${member.businessName}</h3>
-            <h4>${member.businessTagLine}</h4>
+            <p>${member.businessTagLine}</p>
            
     
             <p><strong>Email:</strong> ${member.email}</p>
