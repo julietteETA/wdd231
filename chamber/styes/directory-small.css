@@ -191,6 +191,7 @@ img {
     background-color: var(--color-var);
     color: var(--color1);
     font-weight:bolder ;
+    transition: 1s;
 }
 .list{
 width: 20%;
@@ -199,6 +200,7 @@ width: 20%;
     background-color: var(--color-var);
     color: var(--color1);
     font-weight: bolder;
+    transition: 1s;
 }
 
 
