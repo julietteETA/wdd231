@@ -6,7 +6,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
-            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business1",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business1.svg",
             "membershipLevel": "3"
         },
         {
@@ -15,7 +15,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
-            " imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business2",
+            " imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business2.svg",
             "membershipLevel": "2"
         },
         {
@@ -24,7 +24,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             " url": "myBusiness.com",
-            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business3",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business3.svg",
             "membershipLevel": "1"
         },
         {
@@ -33,7 +33,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
-            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business6",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business6.svg",
             "membershipLevel": "3"
         },
         {
@@ -42,7 +42,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
-            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business8",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business8.svg",
             "membershipLevel": "2"
         },
         {
@@ -51,7 +51,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
-            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business9",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business9.svg",
             "membershipLevel": "1"
         },
         {
@@ -60,7 +60,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
-            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business10",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business10.svg",
             "membershipLevel": "2"
         },
         {
@@ -69,7 +69,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
-            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business12",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business12svg",
             "membershipLevel": "1"
         },
         {
@@ -78,7 +78,7 @@
             "email": "info@gmail.com",
             "phone": "800-555-1234",
             "url": "myBusiness.com",
-            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business12",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business5.png",
             "membershipLevel": "3"
         }
     ]
