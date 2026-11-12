@@ -20,165 +20,60 @@ hamButton.addEventListener("click", () => {
     nav.classList.toggle("show");
     hamButton.classList.toggle("show");
 });
-// Copy the following code array named "temples" which consists of a sample of temple objects and place the array into your own JavaScript file.
+// Using a Json and fetch method and json data
+const doc = "members.json";
+const cards = document.querySelector('#cards');
+async function getProphetData() {
+    const response = await fetch(url);
+    const data = await response.json();
+    //console.table(data.prophets); // temporary testing of data response
+    displayProphets(data.prophets);
+}
 
-const temples = [
-    {
-        templeName: "Aba Nigeria",
-        location: "Aba, Nigeria",
-        dedicated: "2005, August, 7",
-        area: 11500,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/aba-nigeria-temple/aba-nigeria-temple-5087-thumb.jpg"
-    },
-    {
-        templeName: "Manti Utah",
-        location: "Manti, Utah, United States",
-        dedicated: "1888, May, 21",
-        area: 74792,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/manti-utah-temple/manti-utah-temple-40551-main.jpg"
-    },
-    {
-        templeName: "Payson Utah",
-        location: "Payson, Utah, United States",
-        dedicated: "2015, June, 7",
-        area: 96630,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/payson-utah-temple/payson-utah-temple-62834-main.jpg"
-    },
-    {
-        templeName: "Yigo Guam",
-        location: "Yigo, Guam",
-        dedicated: "2020, May, 2",
-        area: 6861,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/yigo-guam-temple/yigo-guam-temple-26495-main.jpg"
-    },
-    {
-        templeName: "Washington D.C.",
-        location: "Kensington, Maryland, United States",
-        dedicated: "1974, November, 19",
-        area: 156558,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/washington-d.c.-temple/washington-d.c.-temple-14992-main.jpg"
-    },
-    {
-        templeName: "Lima Perú",
-        location: "Lima, Perú",
-        dedicated: "1986, January, 10",
-        area: 9600,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/lima-peru-temple/lima-peru-temple-12721-main.jpg"
-    },
-    {
-        templeName: "Mexico City Mexico",
-        location: "Mexico City, Mexico",
-        dedicated: "1983, December, 2",
-        area: 116642,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/mexico-city-mexico-temple/mexico-city-mexico-temple-4060-main.jpg"
-    },
-
-
-
-    // Add more temple objects here...
-    {
-        templeName: "Kinshasa Democratic Republic of Congo",
-        location: "Kinshasa, Democratic Republic oF Congo",
-        dedicated: "2019, April, 14",
-        area: 12000,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/kinshasa-democratic-republic-of-the-congo-temple/kinshasa-democratic-republic-of-the-congo-temple-3526-thumb.jpg"
-    },
-    {
-        templeName: "Accra Ghana ",
-        location: "Accra, Ghana",
-        dedicated: "2004, January, 11",
-        area: 17500,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
-    },
-    {
-        templeName: "Johannesburg South Africa ",
-        location: "Johannesburg, South Africa",
-        dedicated: "1985, August, 25",
-        area: 19184,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
-    },
-
-];
 
 //Select the container element
 const container = document.getElementById("image");
 
-// Loop through the array and create "temple cards" for each temple by displaying:
-function displayTemples(temples) {
+// Loop through the array and create "business cards" for each business by displaying:
+function displayBusinesses(businesses) {
     container.innerHTML = "";
-    temples.forEach(temple =>
+    businesses.forEach(business =>
     // Create card container
     {
         const cardFiltered = document.createElement("div");
         //Add a style
         cardFiltered.style.backgroundColor = "#f0ebeb";
 
-
-
-
-        //The name of the temple.
-        //The location of the temple.
-        //The date the temple was dedicated.
-        // Total area of the temple in square feet.
-        // The provided image of the temple(an absolute address), making sure to include an appropriate alt value such as the name of the temple.
-        // Use native lazy loading for each temple image.
-
         cardFiltered.innerHTML = `
-            <h3>${temple.templeName}</h3>
+            <h3>${business.businessName}</h3>
+            <h4>${business.businessTagLine}</h4>
+            
     
-            <p><strong>Location:</strong> ${temple.location}</p>
-            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-            <p><strong>Size:</strong> ${temple.area} sq ft</p>
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" >`;
+            <p><strong>Email:</strong> ${business.email}</p>
+            <p><strong>Phone:</strong> ${business.phone}</p>
+            <p><strong>URL:</strong> ${business.url} sq ft</p>
+            <img src="${business.imageUrl}" alt="${business.businessName}" loading="lazy" >;
+            `;
+        cardFiltered.style.float = "left"
+    
         container.appendChild(cardFiltered);
 
 
     });
 }
 
-//Respond to the main navigation menu items by filtering and displaying the temples as follows:
 
-// Old – temples built before 1900
-document.querySelector("#old").addEventListener("click", () => {
-    const oldTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
-    displayTemples(oldTemples);
+
+// grid – display all the businesses as a grid
+document.querySelector("#grid").addEventListener("click", () => { displayBusinesses (businesses);
+    displayBusinesses(businesses);
 });
 
 
 
-//New – temples built after 2000
-document.querySelector("#new").addEventListener("click", () => {
-    const newTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
-    displayTemples(newTemples);
-});
-
-//Large – temples larger than 90,000 square feet
-document.querySelector("#large").addEventListener("click", () => {
-    const largeTemples = temples.filter(temple => temple.area > 90000);
-    displayTemples(largeTemples);
-});
-
-
-//Small – temples smaller than 10,000 square feet
-document.querySelector("#small").addEventListener("click", () => {
-    const smallTemples = temples.filter(temple => temple.area < 10000);
-    displayTemples(smallTemples);
-});
-
-
-// Home – displays all the temples stored in the array.
-document.querySelector("#home").addEventListener("click", () => displayTemples(temples));
-displayTemples(temples);
+// list– displays all the businesses as a list.
+document.querySelector("#home").addEventListener("click", () => displayBusinesses(businesses));
+displayBusinesses(businesses);
 
 
 //Extra : An other to loop through the array
