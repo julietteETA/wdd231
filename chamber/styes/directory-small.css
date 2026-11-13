@@ -173,6 +173,7 @@ main {
 
 
 
+
 img {
     width: 50%;
     height: auto;
@@ -225,13 +226,42 @@ h3 {
 }
 
 p {
-    text-align: center;
+    
     font-size: small;
     padding-bottom: 5px;
 }
 
 
 
+
+/* GRID View*/
+
+#image.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+#image.grid .member-card {
+    display: flex;
+    /* Places image and text side-by-side */
+    align-items: center;
+    /* Vertically centers the image with the text */
+    gap: 16px;
+    /* Space between image and text */
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: left;
+    /* Aligns text cleanly to the left */
+}
+
+#image.grid .member-card img {
+    width: 90px;
+    /* Fixed width keeps all cards aligned */
+    height: auto;
+    flex-shrink: 0;
+    /* Prevents the image from shrinking */
+}
 
 
 

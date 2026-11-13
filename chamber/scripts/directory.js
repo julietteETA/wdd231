@@ -48,20 +48,24 @@ const displayMembers = (members) => {
 
     members.forEach((member) => {
         const cardFiltered = document.createElement("div");
+        cardFiltered.classList.add("member-card");
         //Add a style
         cardFiltered.style.backgroundColor = "#f0ebeb";
 
         cardFiltered.innerHTML = `
-      
-            <h3>${member.businessName}</h3>
-            <p>${member.businessTagLine}</p>
-           
-    
-            <p><strong>Email:</strong> ${member.email}</p>
-            <p><strong>Phone:</strong> ${member.phone}</p>
-            <p><strong>URL:</strong> ${member.url}</p>
-            <p><strong>Level:</strong> ${member.membershipLevel}</p>
             <img src="${member.imageUrl}" alt="${member.businessName} logo " loading="lazy" >
+            <div class ="design">
+      
+                <h3>${member.businessName}</h3>
+                <p>${member.businessTagLine}</p>
+            
+        
+                <p><strong>Email:</strong> ${member.email}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>URL:</strong> ${member.url}</p>
+                <p><strong>Level:</strong> ${member.membershipLevel}</p>
+            </div>
+           
             `;
             
 
