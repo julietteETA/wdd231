@@ -30,18 +30,21 @@ async function getMembers() {
     const response = await fetch(url);
     const data = await response.json();
     //display grid by default
-    displayMembers(data.members);
+    membersData =data.members
+    displayMembers(membersData);
 }
 
 
 
 // 1. GRID VIEW: Shows full cards with images and details
 //Select the container element
-
+const gridBtn = document.querySelector('#grid');
 const displayMembers = (members) => {
+    
     container.innerHTML = ""; // Clear container
     container.classList.add('grid');
     container.classList.remove('list');
+
 
     members.forEach((member) => {
         const cardFiltered = document.createElement("div");
@@ -60,9 +63,10 @@ const displayMembers = (members) => {
             <p><strong>Level:</strong> ${member.membershipLevel}</p>
             <img src="${member.imageUrl}" alt="${member.businessName} logo " loading="lazy" >
             `;
+            
 
         container.appendChild(cardFiltered);
-       
+        
 
 
     });
@@ -75,19 +79,10 @@ getMembers();
 
 //Grid and list button 
 
-const gridBtn = document.querySelector('#grid'); 
+
 const listBtn = document.querySelector('#list'); 
 
-let membersData = [];
 
-async function getMembers() {
-    const response = await fetch(url);
-    const data = await response.json();
-    membersData = data.members;
-
-    // Show Grid View by default
-    displayGrid(membersData);
-}
 
 
 

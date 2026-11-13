@@ -161,9 +161,10 @@ main {
     margin: 0 auto;
 }
 
-.container {
+.container  {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    
     gap: 50px;
     padding-bottom: 10px;
 
@@ -184,18 +185,18 @@ img {
 .menu{
     margin: 1rem;
 }
-.grid{
-   width: 20%;
+
     
-    }
+    
 .grid:hover{
     
     font-weight:bolder ;
     transition: 1s;
 }
-.list{
-width: 20%;
+button{
+    width: 20%;
 }
+
 .list:hover {
     
     font-weight: bolder;
