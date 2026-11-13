@@ -39,6 +39,10 @@ async function getMembers() {
 //Select the container element
 
 const displayMembers = (members) => {
+    container.innerHTML = ""; // Clear container
+    container.classList.add('grid');
+    container.classList.remove('list');
+
     members.forEach((member) => {
         const cardFiltered = document.createElement("div");
         //Add a style
@@ -58,6 +62,7 @@ const displayMembers = (members) => {
             `;
 
         container.appendChild(cardFiltered);
+       
 
 
     });
@@ -84,33 +89,7 @@ async function getMembers() {
     displayGrid(membersData);
 }
 
-// 1. GRID VIEW: Shows full cards with images and details
-const displayGrid = (members) => {
-    container.innerHTML = ""; 
-    container.classList.add('grid');
-    container.classList.remove('list');
 
-    members.forEach((member) => {
-        const cardFiltered = document.createElement("div");
-        cardFiltered.classList.add("member-card");
-        cardFiltered.style.backgroundColor = "#f0ebeb";
-
-        // Handles the extra space in Kin Transport's " url" key
-        const memberUrl = member.url || member[" url"] || "";
-
-        cardFiltered.innerHTML = `
-            <h3>${member.businessName}</h3>
-            <p>${member.businessTagLine}</p>
-            <p><strong>Email:</strong> ${member.email}</p>
-            <p><strong>Phone:</strong> ${member.phone}</p>
-            <p><strong>URL:</strong> <a href="https://${memberUrl}" target="_blank">${memberUrl}</a></p>
-            <p><strong>Level:</strong> ${member.membershipLevel}</p>
-            <img src="${member.imageUrl}" alt="${member.businessName} logo" loading="lazy">
-        `;
-
-        container.appendChild(cardFiltered);
-    });
-};
 
 // 2. LIST VIEW: Looks like a table with Company Name, URL, and Phone Number
 const displayList = (members) => {
@@ -146,7 +125,7 @@ const displayList = (members) => {
 };
 
 // Button Click Listeners
-gridBtn.addEventListener('click', () => displayGrid(membersData));
+gridBtn.addEventListener('click', () => displayMembers(membersData));
 listBtn.addEventListener('click', () => displayList(membersData));
 
 // Load data

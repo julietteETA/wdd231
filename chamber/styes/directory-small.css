@@ -5,6 +5,7 @@
     height: auto;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 
 
 }
@@ -228,23 +229,10 @@ p {
     padding-bottom: 5px;
 }
 
-/* ===========================
-   GRID VIEW (Cards)
-   =========================== */
 
 
-#image.grid .member-card {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-}
 
-#image.grid .member-card img {
-    max-width: 120px;
-    height: auto;
-    margin-top: 10px;
-}
+
 
 /* ===========================
    LIST VIEW (Table Layout)
@@ -273,7 +261,7 @@ p {
     font-weight: bold;
 }
 
-/* Alternating row background matching your #f0ebeb */
+/* Alternating row background */
 #image.list .table-row:nth-child(even) {
     background-color: #f0ebeb;
 }
@@ -308,7 +296,7 @@ footer{
     align-items: center;
 
 }
-img{
+footer img{
     margin: 5%;
     
 }
