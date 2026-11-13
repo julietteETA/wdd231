@@ -51,7 +51,7 @@ const displayMembers = (members) => {
         cardFiltered.classList.add("member-card");
         //Add a style
         cardFiltered.style.backgroundColor = "#f0ebeb";
-
+        const memberUrl = member.url || member[" url"] || "";
         cardFiltered.innerHTML = `
             <img src="${member.imageUrl}" alt="${member.businessName} logo " loading="lazy" >
             <div class ="design">
@@ -62,7 +62,7 @@ const displayMembers = (members) => {
         
                 <p><strong>Email:</strong> ${member.email}</p>
                 <p><strong>Phone:</strong> ${member.phone}</p>
-                <a class="company-url" href="https://${member.Url}" target="_blank">${member.Url}</a>
+                <a class="company-url" href="https://${memberUrl}" target="_blank">${memberUrl}</a>
                 <p><strong>Level:</strong> ${member.membershipLevel}</p>
             </div>
            

@@ -14,7 +14,6 @@
     --color: rgb(40, 12, 66);
     --color-var: rgb(69, 9, 126);
     --color1: rgb(255, 255, 255);
-    --color2: rgb(255, 255, 0);
     --color3: rgb(34, 33, 33);
 }
 
@@ -33,9 +32,7 @@ h1 {
 
 }
 
-h2 {
-    padding: 30px 20px 40px 10px;
-}
+
 
 header,
 footer {
@@ -284,12 +281,12 @@ p {
     padding: 12px 16px;
     align-items: center;
     gap: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color1);
 }
 
 #image.list .table-header {
     background-color:var(--color3);
-    color: #fff;
+    color: var(--color1);
     font-weight: bold;
 }
 
@@ -312,7 +309,7 @@ p {
 
 .company-url {
     color: var(--color-var);
-    text-decoration: none;
+    
 }
 
 .company-url:hover {
@@ -324,7 +321,7 @@ p {
 
 footer{
     display: flex;
-    justify-content: center;
+    
     align-items: center;
 
 }
