@@ -53,7 +53,7 @@ const displayMembers = (members) => {
         cardFiltered.style.backgroundColor = "#f0ebeb";
         const memberUrl = member.url || member[" url"] || "";
         cardFiltered.innerHTML = `
-            <img src="${member.imageUrl}" alt="${member.businessName} logo " loading="lazy" >
+            <img src="${member.imageUrl}" alt="${member.businessName} logo " loading="lazy" width = "5" height ="5">
             <div class ="design">
       
                 <h2>${member.businessName}</h2>
