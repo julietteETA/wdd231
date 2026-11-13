@@ -5,7 +5,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            "url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business1.svg",
             "membershipLevel": "3"
         },
@@ -14,7 +14,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            "url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business7.svg",
             "membershipLevel": "2"
         },
@@ -23,7 +23,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            " url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business3.svg",
             "membershipLevel": "1"
         },
@@ -32,7 +32,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            "url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business6.svg",
             "membershipLevel": "3"
         },
@@ -41,7 +41,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            "url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business8.svg",
             "membershipLevel": "2"
         },
@@ -50,7 +50,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            "url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business9.svg",
             "membershipLevel": "1"
         },
@@ -59,7 +59,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            "url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business10.svg",
             "membershipLevel": "2"
         },
@@ -68,7 +68,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            "url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business12.svg",
             "membershipLevel": "1"
         },
@@ -77,7 +77,7 @@
             "businessTagLine": "Business Tag Line",
             "email": "info@gmail.com",
             "phone": "800-555-1234",
-            "url": "myBusiness.com",
+            "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business5.png",
             "membershipLevel": "3"
         }

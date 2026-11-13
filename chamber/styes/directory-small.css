@@ -28,7 +28,7 @@ body {
 
 h1 {
     text-align: left;
-    font-size: 3rem;
+    font-size: 2rem;
     margin-left: 1rem;
 
 }
@@ -262,6 +262,7 @@ p {
     flex-shrink: 0;
     /* Prevents the image from shrinking */
 }
+
 
 
 

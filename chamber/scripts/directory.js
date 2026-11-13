@@ -56,13 +56,13 @@ const displayMembers = (members) => {
             <img src="${member.imageUrl}" alt="${member.businessName} logo " loading="lazy" >
             <div class ="design">
       
-                <h3>${member.businessName}</h3>
+                <h2>${member.businessName}</h2>
                 <p>${member.businessTagLine}</p>
             
         
                 <p><strong>Email:</strong> ${member.email}</p>
                 <p><strong>Phone:</strong> ${member.phone}</p>
-                <p><strong>URL:</strong> ${member.url}</p>
+                <a class="company-url" href="https://${member.Url}" target="_blank">${member.Url}</a>
                 <p><strong>Level:</strong> ${member.membershipLevel}</p>
             </div>
            
