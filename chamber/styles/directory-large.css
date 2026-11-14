@@ -57,5 +57,17 @@
         width: 30%;
     }
 
+    /* HOME STYLE*/
+        .hero-image p {
+            font-weight: bold;
+            font-size: large;
+            position: absolute;
+            top: 300%;
+            color: var(--color1);
+        }
+
+        .activity img  {
+                    width: 40%;
+            }
 
 }

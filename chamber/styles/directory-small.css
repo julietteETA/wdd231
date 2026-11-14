@@ -327,3 +327,48 @@ footer img{
 #lastmodified {
     color: var(--color2);
 }
+/*/HOME PAGE DESIGN/*/
+
+/* Header*/
+
+.home{
+    
+    max-width: 1600px;
+    
+    
+}
+/*main*/
+
+.hero-image h2{
+    font-weight: bold;
+    background-color: var(--color-var);
+    color: var(--color1);
+    
+    
+    
+}
+.hero-image img{
+    width: 100%;
+
+   
+}
+.hero-image p{
+    font-weight: bold;
+    
+    color: var(--color1);
+}
+.kin{
+    display: grid;
+    grid-template-rows: 50px 150px;
+    justify-content: center;
+}
+.kin h2 {
+    background-color: var(--color);
+    color: var(--color1);
+    align-items: center;
+}
+.activity{display: flex;
+background-color: var(--color-var);
+color: var(--color1);
+font-style: italic;
+}
