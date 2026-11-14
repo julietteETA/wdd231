@@ -131,104 +131,48 @@ listBtn.addEventListener('click', () => displayList(membersData));
 getMembers();
 
 //HOME
-const spotlightCard = document.querySelector("#card");
+const spotBtn = document.querySelector('#spot');
+const displaySpotLight = (members) => {
 
-const ur = "https://julietteeta.github.io/wdd231/chamber/data/members.json";
+    container.innerHTML = ""; // Clear container
+    container.classList.add('spotlight');
+    container.classList.remove('grid');
+    container.classList.remove('list');
 
-async function displaySpotlights() {
-    try {
-        // Fetch JSON data
-        const response = await fetch(ur);
 
-        if (!response.ok) {
-            throw new Error("Failed to fetch JSON data");
-        }
-
-        const data = await response.json();
-
-        // Get members from JSON
-        const members = data.members;
-
-        // Filter Gold and Silver members
-        const qualifiedMembers = members.filter(member =>
-            member.membershipLevel === "2" ||
-            member.membershipLevel === "3"
-        );
-
-        // Shuffle members randomly
-        const shuffled = [...qualifiedMembers];
-
-        for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-
-        // Randomly choose 2 or 3 members
-        const quantity = Math.min(
-            Math.floor(Math.random() * 2) + 2,
-            shuffled.length
-        );
-
-        const spotlights = shuffled.slice(0, quantity);
-
-        // Display members
-        spotlightCard.innerHTML = spotlights.map(member => {
-
-            const level = member.membershipLevel === "3"
-                ? "Gold Member"
-                : "Silver Member";
-
-            return `
-                <div class="spotlight-card">
-
-                    <h2>${member.businessName}</h2>
-
-                    <img src="${member.imageUrl}"
-                         alt="${member.businessName} logo">
-
-                    <p>${member.businessTagLine}</p>
-
-                    <p>
-                        <strong>Phone:</strong>
-                        ${member.phone}
-                    </p>
-
-                    <p>
-                        <strong>Email:</strong>
-                        ${member.email}
-                    </p>
-
-                    <p>
-                        <strong>Address:</strong>
-                        Address not available
-                    </p>
-
-                    <p>
-                        <strong>Website:</strong>
-                        <a href="https://${member.url}"
-                           target="_blank">
-                            ${member.url}
-                        </a>
-                    </p>
-
-                    <p class="membership">
-                        ${level}
-                    </p>
-
-                </div>
+    members.forEach((member) => {
+        const cardFiltered = document.createElement("div");
+        cardFiltered.classList.add("member-card");
+        //Add a style
+        cardFiltered.style.backgroundColor = "#f0ebeb";
+        const memberUrl = member.url || member[" url"] || "";
+        cardFiltered.innerHTML = `
+            <img src="${member.imageUrl}" alt="${member.businessName} logo " loading="lazy" width = "5" height ="5">
+            <div class ="design">
+      
+                <h2>${member.businessName}</h2>
+                <p>${member.businessTagLine}</p>
+            
+        
+                <p><strong>Email:</strong> ${member.email}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <a class="company-url" href="https://${memberUrl}" target="_blank">${memberUrl}</a>
+                <p><strong>Level:</strong> ${member.membershipLevel}</p>
+            </div>
+           
             `;
-        }).join("");
 
-    } catch (error) {
-        console.error("Error displaying spotlights:", error);
 
-        spotlightCard.textContent =
-            "Unable to load spotlight members.";
-    }
+        container.appendChild(cardFiltered);
+
+
+
+    });
+
 }
 
-// Call function when page loads
-displaySpotlights();
+    ;
+getMembers();
 
 
 
