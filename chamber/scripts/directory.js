@@ -131,54 +131,108 @@ listBtn.addEventListener('click', () => displayList(membersData));
 getMembers();
 
 //HOME
+const spotlightCard = document.querySelector("#card");
 
+const ur = "https://julietteeta.github.io/wdd231/chamber/data/members.json";
 
-const spotLightContainer = document.querySelector("#card");
-const spotLightButton = document.querySelector("#spot");
-//fetch for asynchronous 
-async function getSpotLight() {
-    const response = await fetch(url);
-    const view = await response.json();
-    //display grid by default
-    const data = view.members;
-    displaySpotLights(data);
+async function displaySpotlights() {
+    try {
+        // Fetch JSON data
+        const response = await fetch(ur);
 
+        if (!response.ok) {
+            throw new Error("Failed to fetch JSON data");
+        }
 
-    // Filter data
-    const filterMembers = view.members.filter(member => member.membershipLevel ===" 2" || member.membershipLevel === "3");
-    //display spotlight
-    displaySpotLights(filterMembers);
+        const data = await response.json();
+
+        // Get members from JSON
+        const members = data.members;
+
+        // Filter Gold and Silver members
+        const qualifiedMembers = members.filter(member =>
+            member.membershipLevel === "2" ||
+            member.membershipLevel === "3"
+        );
+
+        // Shuffle members randomly
+        const shuffled = [...qualifiedMembers];
+
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+
+        // Randomly choose 2 or 3 members
+        const quantity = Math.min(
+            Math.floor(Math.random() * 2) + 2,
+            shuffled.length
+        );
+
+        const spotlights = shuffled.slice(0, quantity);
+
+        // Display members
+        spotlightCard.innerHTML = spotlights.map(member => {
+
+            const level = member.membershipLevel === "3"
+                ? "Gold Member"
+                : "Silver Member";
+
+            return `
+                <div class="spotlight-card">
+
+                    <h2>${member.businessName}</h2>
+
+                    <img src="${member.imageUrl}"
+                         alt="${member.businessName} logo">
+
+                    <p>${member.businessTagLine}</p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        ${member.phone}
+                    </p>
+
+                    <p>
+                        <strong>Email:</strong>
+                        ${member.email}
+                    </p>
+
+                    <p>
+                        <strong>Address:</strong>
+                        Address not available
+                    </p>
+
+                    <p>
+                        <strong>Website:</strong>
+                        <a href="https://${member.url}"
+                           target="_blank">
+                            ${member.url}
+                        </a>
+                    </p>
+
+                    <p class="membership">
+                        ${level}
+                    </p>
+
+                </div>
+            `;
+        }).join("");
+
+    } catch (error) {
+        console.error("Error displaying spotlights:", error);
+
+        spotlightCard.textContent =
+            "Unable to load spotlight members.";
+    }
 }
 
-const displaySpotLights = () => {
-    spotLightContainer.innerHTML = "";
-    members.forEach((member) => {
-        const view = document.createElement("div");
-        // Convert the silver end golden to a more styled way
-        const membershipLabel = member.membershipLevel === "3" ? "🌟🌟🌟" : "🌟🌟";
+// Call function when page loads
+displaySpotlights();
 
-        view.innerHTML = `
-            <h3>${member.businessName}</h3>
-            <p class="tagline">${member.businessTagLine}</p>
-            <img src="${member.imageUrl}" alt="${member.businessName} Logo" loading="lazy" width="120" height="120">
-            <div class="spotlight-details">
-                <p><strong>Phone:</strong> ${member.phone}</p>
-                <p><strong>Address:</strong> ${member.email} </p>
-                <p><strong>Website:</strong> ${member.memberUrl} </p>
-                <p class="level"><strong>Level:</strong> ${membershipLabel}</p>
-            </div>
-        `;
-        spotLightContainer.append(view);
 
-    });
 
-};
-getSpotLight();
 
-if (spotlightButton) {
-    spotlightButton.addEventListener('click', getSpotlights);
-};
-getSpotLight();
 
 
 

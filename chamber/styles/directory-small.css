@@ -373,7 +373,8 @@ color: var(--color1);
 font-style: italic;
 }
 .class{
-    display: flex;
+    display:grid;
+    grid-template-columns: 1fr 4fr;
 }
 .spotlight {
     justify-content: flex-start;
@@ -391,4 +392,7 @@ font-style: italic;
     font-style: italic;
     border-radius: 15%;
     
+}
+.member{
+    background-color: black;
 }
