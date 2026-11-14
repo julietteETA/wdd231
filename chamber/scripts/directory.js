@@ -129,3 +129,57 @@ listBtn.addEventListener('click', () => displayList(membersData));
 
 // Load data
 getMembers();
+
+//HOME
+
+
+const spotLightContainer = document.querySelector("#card");
+const spotLightButton = document.querySelector("#spot");
+//fetch for asynchronous 
+async function getSpotLight() {
+    const response = await fetch(url);
+    const view = await response.json();
+    //display grid by default
+    const data = view.members;
+    displaySpotLights(data);
+
+
+    // Filter data
+    const filterMembers = view.members.filter(member => member.membershipLevel ===" 2" || member.membershipLevel === "3");
+    //display spotlight
+    displaySpotLights(filterMembers);
+}
+
+const displaySpotLights = () => {
+    spotLightContainer.innerHTML = "";
+    members.forEach((member) => {
+        const view = document.createElement("div");
+        // Convert the silver end golden to a more styled way
+        const membershipLabel = member.membershipLevel === "3" ? "🌟🌟🌟" : "🌟🌟";
+
+        view.innerHTML = `
+            <h3>${member.businessName}</h3>
+            <p class="tagline">${member.businessTagLine}</p>
+            <img src="${member.imageUrl}" alt="${member.businessName} Logo" loading="lazy" width="120" height="120">
+            <div class="spotlight-details">
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>Address:</strong> ${member.email} </p>
+                <p><strong>Website:</strong> ${member.memberUrl} </p>
+                <p class="level"><strong>Level:</strong> ${membershipLabel}</p>
+            </div>
+        `;
+        spotLightContainer.append(view);
+
+    });
+
+};
+getSpotLight();
+
+if (spotlightButton) {
+    spotlightButton.addEventListener('click', getSpotlights);
+};
+getSpotLight();
+
+
+
+ 

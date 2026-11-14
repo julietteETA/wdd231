@@ -372,3 +372,23 @@ background-color: var(--color-var);
 color: var(--color1);
 font-style: italic;
 }
+.class{
+    display: flex;
+}
+.spotlight {
+    justify-content: flex-start;
+
+    padding: 3rem;
+    width: 40%;
+    font-size: large;
+    font-weight: bold;
+    color: var(--color1);
+    background-color: var(--color);
+}
+.spotlight:hover{
+    background-color: var(--color-var);
+    transition: 1s;
+    font-style: italic;
+    border-radius: 15%;
+    
+}

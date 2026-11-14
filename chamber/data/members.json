@@ -70,7 +70,7 @@
             "phone": "800-555-1234",
             "url":"myBusiness.com",
             "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business12.svg",
-            "membershipLevel": "1"
+            "membershipLevel":"1"
         },
         {
             "businessName": "Grocery",
