@@ -524,18 +524,11 @@ button:hover {
 
 
 
-.level h3 {
-     
-           
-            animation: spin 1.5s linear infinite;
-            box-shadow: 0 0 1rem var(--color-var);
-}
+
 
 .level h3 {
     position: relative;
     border: 5px solid transparent;
-   
-    animation: spin 1.5s linear infinite;
     box-shadow: 0 0 1rem rgb(0 0 255 / 40);}
     
 
