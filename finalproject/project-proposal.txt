@@ -1,0 +1,15 @@
+WO4 Project : Proposal 
+
+1.	Project Subject : FISHY drc 
+The Democratic Republic of Congo (DRC) best provider of fishes.
+
+2.	Project Description 
+FISHY drc Website will be made of 4 pages : 
+-	Home page : showing the updated content with photos of rivers in DR Congo, available products and public rating each of our product. 
+-	About US : display our main contact, location, sign in to our news about available products
+-	Buy :  display products photos and link and a link  link to  purchase fishes or any other products
+-	Jobs opportunities :  A place where we share job opportunities in FISHY drc 
+
+3.	Project Reason an Pu 
+DRC is covered by many waters (rivers, lakes, ocean) although up to 70% of our fishes consumption comes from importation. Thus fishes reunite all artisanal fishes producers to one distributor over urban cities such as Kinshasa.
+The majority of African population is made of youth(people under 50 years old) ; likewise they have access to internet and social media, which has become the main channel of information diffusion.  So through this website, FISHY rdc share the products and keep population in touch.

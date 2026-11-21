@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-US">   
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kinshasa largest network of Kinshasa small businesses,opportunity to learn and share  ">
+    <meta name="author" content="Juliette Phemba Ngoma">
+    <title>Kinshasa Chamber of Course Home</title>
+    <link rel="icon" href="images/favicon.ico">
+    <meta property="og:title" content="Kinshasa Chamber of Commerce Directory for everyone">
+    <meta property="og:description" content="The is the greatest network of small businesses in Kinshasa, full of education and customers  opportunity">
+    <meta property="og:image" content="https://julietteETA.github.io/wdd231/chamber/images/business7.svg">
+    <meta property="og:url" content="https://julietteETA.io/wdd231/chamber/directory.html">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory-small.css">
+    <link rel="stylesheet" href="styles/directory-large.css">
+    <script src="scripts/directory.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,401;1,75..100,401&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="header-home" >
+
+        <div class="hero">
+            <img src="images/kcc-logo.jpg" alt="Finance center Kinshasa" loading="lazy" width="5" height="5">
+            <p> Kinshasa Chamber of Commerce Home </p>
+            <div id="menu"></div>
+        </div>
+
+        <nav >
+
+            <ul class="navigation">
+
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="directory.html" class="active" id="Directory">Directory</a></li>
+                <li><a href="join.html" id="Join">Join</a></li>
+                <li><a href="#" id="Discover">Discover </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main >
+        <div class="application-container">
+            <section class="form-block">
+                <h1>Join here</h1>
+                <form action="thankyou.html" method="get">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+
+                    <label for="organizationtitle">Organization Title:</label>
+                    <input type="text" id="organizationtitle" name="organizationTitle" title="Enter your organization title" autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+
+                    <label for="emailadress">Email Address:</label>
+                    <input type="email" name="emailAddress" title="Enter your email address" autocomplete="email" placeholder="juliette@gmail.com" required>
+
+                    <label for="mobilephonenumber">Mobile Phone Number:</label>
+                    <input type="tel" name="mobilePhoneNumber" title="Enter your mobile phone number" autocomplete="tel" required>
+
+                    <label for="organization'sname">Organization Name:</label>
+                    <input type="text" name="organization'sName" title="Enter your business or organization's name" autocomplete="organization" required>
+
+                    <label for="membership level">Membership Level:</label>
+                    <select name="membershipLevel" id="membershiplevel" title="Select a membership level" required>
+                        <option value="" disabled selected> Select a membership level</option>
+                        <option value="np"> NP Membership (Non-Profit - No Fee) </option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+
+                    <label for="organization'sdescription">Organization's Description: 
+                        <textarea title="Provide a brief description of business or your organization" name="organization'sDescription"
+                            rows="5"></textarea>
+                    </label>
+                    
+
+                    <input type="hidden" id="timestamp" name="timestamp">
+
+                    <input type="submit" value="Join Us" >
+
+                </form>
+            </section>
+            <!--  4 Membership Cards-->
+            <section class="membership-card">
+                <h2>Details of Membership</h2>
+                <div class="level">
+                    <h3>Non-Profit Membership Level</h3>
+                    <a href="#modal-np" data-modal="modal-np" class="modal-link">Learn More</a>
+                </div>
+                <div class="level">
+                    <h3>Bronze Membership Level</h3>
+                    <a href="#modal-bronze" data-modal="modal-bronze" class="modal-link">Learn More</a>
+                </div>
+                
+                <div class="level">
+                    <h3>Silver Membership Level</h3>
+                    <a href="#modal-silver" data-modal="modal-silver" class="modal-link">Learn More</a>
+                </div>
+                
+                <div class="level">
+                    <h3>Gold Membership Level</h3>
+                    <a href="#modal-gold" data-modal="modal-gold" class="modal-link">Learn More</a>
+                </div>
+            </section>
+        </div>
+        <!-- dialog elements) -->
+        <dialog id="modal-np">
+            <h3>NP Membership (Non-Profit)</h3>
+            <p><strong>Annual Cost:</strong> Free</p>
+            <ul>
+                <li>Listing in the online Chamber directory</li>
+                <li>Invitations to monthly community networking events</li>
+                <li>Access to community bulletin board postings</li>
+            </ul>
+            <button type="button" class="close-btn">Close</button>
+        </dialog>
+        
+        <dialog id="modal-bronze">
+            <h3>Bronze Membership</h3>
+            <p><strong>Annual Cost:</strong> $250</p>
+            <ul>
+                <li>All NP Membership benefits</li>
+                <li>10% discount on business training workshops</li>
+                <li>Ribbon-cutting ceremony for new businesses</li>
+                <li>Quarterly social media spotlight</li>
+            </ul>
+            <button type="button" class="close-btn">Close</button>
+        </dialog>
+        
+        <dialog id="modal-silver">
+            <h3>Silver Membership</h3>
+            <p><strong>Annual Cost:</strong> $500</p>
+            <ul>
+                <li>All Bronze Membership benefits</li>
+                <li>25% discount on Chamber luncheons and special events</li>
+                <li>Rotating spotlight position on the Chamber home page</li>
+                <li>Complimentary booth at the annual Business Expo</li>
+            </ul>
+            <button type="button" class="close-btn">Close</button>
+        </dialog>
+        
+        <dialog id="modal-gold">
+            <h3>Gold Membership</h3>
+  <p><strong>Annual Cost:</strong> $1,000</p>
+  <ul>
+    <li>All Silver Membership benefits</li>
+    <li>50% discount on all VIP events and executive training</li>
+    <li>Permanent prime banner advertising on the home page</li>
+    <li>VIP seating at the annual Mayor; Leaders Banquet</li>
+  </ul>
+  <button type="button" class="close-btn">Close</button>
+</dialog>
+
+        
+
+        
+
+        
+
+    </main>
+    <footer>
+        <div class="address">
+            <h2>Kinshasa Chamber of Commerce</h2>
+            <p> 301 Rue de la Justice </p>
+            <p>Kinshasa, DR Congo 1011</p>
+            <p>info@Kinshasacc.org</p>
+            <p>(243) 817 777 777</p>
+        </div>
+        <nav class="socialmedia">
+            <a href="https://github.com/julietteETA/wdd231">
+                <img src="images/instagram2_logo.png" alt="instagram logo" loading="lazy" width="5" height="5">
+            </a>
+        
+            <a href="#">
+                <img src="images/linkedin3_logo.jpg" alt="LinkedIn Logo" loading="lazy" width="5" height="5">
+            </a>
+            <a href="https://www.google.com/search?client=firefox-b-d&q=youtube">
+                <img src="images/facebook_logo.png" alt="facebook Logo" loading="lazy" width="5" height="5">
+            </a>
+        </nav>
+        <div>
+            <p> WDD231 Class Project </p>
+            <p>Juliette Phemba</p>
+            <p>☘️© <span id="currentyear"></span> Juliette Phemba DR Congo☘️</p>
+            <p id="lastmodified"> Last modification</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

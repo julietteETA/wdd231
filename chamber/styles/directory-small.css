@@ -396,3 +396,250 @@ font-style: italic;
 .member{
     background-color: black;
 }
+
+/* JOIN US PAGE STYLE*/
+/* Small Screens: 1 column (Form on top, Cards below) */
+.application-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+form{
+    text-align: left;
+    padding: 1rem;
+    font-weight: bold;
+}
+form label {
+    display: block;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form select,
+form textarea {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    padding: 0.65rem;
+    margin-top: 0.35rem;
+    font-size: 1rem; 
+    border-radius: 6px;
+}
+
+
+input[type ="submit"]  {
+    background-color: var(--color-var);
+    color: var(--color1);
+    font-size: large;
+    font-weight: bold;
+    width: 40%;
+    border-radius: 10px;
+    
+    
+    
+}
+input[type="submit"]:hover{
+    background-color: green;
+    transition: 10ms;
+    
+}
+input:required {
+    border-left: solid 8px red;
+}
+input:required:valid {
+    border-bottom: solid 8px green;
+}
+
+
+
+
+
+
+
+
+.modal-link {
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    background-color: rgb(69, 9, 126);
+    color: rgb(255, 255, 255);
+   border-radius: 100px;
+    
+   
+   
+    
+
+}
+
+
+.modal-link:hover{
+    background-color: green;
+        transition: 10ms;
+        font-weight: bold;
+}
+dialog{
+    width: 50%;
+    height: 50%;
+
+}
+dialog ul{
+   text-align:center;
+
+}
+
+dialog h3{
+    font-style: italic;
+    font-size: larger;
+    
+
+    
+}
+#modal-bronze{
+    background-color: rgb(238, 213, 136) ;
+}
+#modal-silver {
+    background-color: rgb(226, 229, 213);
+}
+#modal-gold {
+    background-color: rgb(234, 230, 1);
+}
+
+button:hover {
+    background-color: green;
+    transition: 10ms;
+    font-weight: bolder;
+    color: var(--color1);
+
+}
+
+/*Animation*/
+
+
+
+.level h3 {
+     
+           
+            animation: spin 1.5s linear infinite;
+            box-shadow: 0 0 1rem var(--color-var);
+}
+
+.level h3 {
+    position: relative;
+    border: 5px solid transparent;
+   
+    animation: spin 1.5s linear infinite;
+    box-shadow: 0 0 1rem rgb(0 0 255 / 40);}
+    
+
+.level h3::after {
+    content: '🪙';
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    animation: spin-and-pulse 1.5s linear infinite;
+}
+
+/* vary according to levels*/
+
+ .level:nth-of-type(1) h3::after {
+    filter: hue-rotate(90deg) saturate(1.2);
+}
+
+/* 2. Bronze: Warm Copper/Brown tint */
+.level:nth-of-type(2) h3::after {
+    filter: hue-rotate(-25deg) saturate(1.4) brightness(0.85);
+}
+
+/* 3. Silver: Metallic Grey */
+.level:nth-of-type(3) h3::after {
+    filter: grayscale(100%) brightness(1.15);
+}
+
+/* 4. Gold: Default gold emoji color */
+.level:nth-of-type(4) h3::after {
+    filter: none;
+}
+
+@keyframes spin-and-pulse {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg) scale(1.25);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg) scale(1);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .level h3::after {
+        animation: none;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/*THANK YOU PAGE style*/
+
+.thank{
+    background-color: rgb(241, 231, 219);
+    
+}
+.thank h1{
+    text-align: center;
+    padding: 2rem;
+}
+.thank h1::after{
+    content: "✅";
+    display: inline-block;
+    margin-left: 8px;
+    animation: heartbeat 1.5s ease-in-out infinite;
+    
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    14% {
+        transform: scale(1.3);
+        /* First beat */
+    }
+
+    28% {
+        transform: scale(1);
+        /* Relax */
+    }
+
+    42% {
+        transform: scale(1.25);
+        /* Second beat */
+    }
+
+    70% {
+        transform: scale(1);
+        /* Pause before next beat */
+    }
+
+    100% {
+        transform: scale(1)}
+        }
+
+    .submission-details {
+
+       text-align:justify;
+        padding: 1rem;
+        font-style: italic;
+    }
