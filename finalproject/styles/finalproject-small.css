@@ -25,12 +25,20 @@ body {
     font-style: normal;
     text-align: center;
 }
+.hero1 img {
+filter: brightness(60%);
+
+}
 h1 {
     font-size: 72px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: left;
     position: absolute;
     color: var(--color4);
     box-shadow: 0 0 1rem var(--color2) ;
+    z-index: 2;
    
 
 }
@@ -50,6 +58,7 @@ header {
     box-shadow: 0 0 30px var(--color3);
 
 }
+
 
 header,
 main {
