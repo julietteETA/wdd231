@@ -1,0 +1,48 @@
+@media (min-width: 740px) {
+    header {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: space-around;
+        gap: 1rem;
+
+
+
+    }
+
+    .hero img {
+        width: 10%;
+    }
+
+
+    .navigation {
+        flex-direction: row;
+        justify-content: stretch;
+        text-align: center;
+
+
+
+
+
+
+    }
+
+    .navigation li {
+        display: block;
+        flex: 1 1 100%;
+
+    }
+
+    .navigation a {
+        flex: 1 1 100%;
+
+    }
+
+    #menu {
+        display: none;
+    }
+
+    main {
+         max-width: 1600px;
+        margin: 0 auto;
+        }
+}

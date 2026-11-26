@@ -1,0 +1,67 @@
+{
+    "fishes": [
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        },
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        },
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        },
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        },
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        },
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        },
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        },
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        },
+        {
+            "fishName": "Dorade",
+            "fishCode": "fd001",
+            "price": "17500",
+            "imageUrl": "https://julietteETA.github.io/wdd231/finalproject/images/business7.svg",
+            "fishPurchaseType": "brut"
+        }
+    ]
+}

@@ -1,0 +1,193 @@
+/*General design*/
+* {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+
+
+}
+
+:root {
+    --color2: rgb(6, 138, 121);
+    --color: rgb(0, 88, 77);
+        
+    --color1: rgb(255, 255, 255);
+    --color3: rgb(34, 33, 33);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 401;
+    font-style: normal;
+    text-align: center;
+}
+h1 {
+    text-align: left;
+    position: absolute;
+    color: var(--color1);
+    box-shadow: 0 0 1rem var(--color2) ;
+   
+
+}
+
+
+
+header,
+footer {
+    color: var(--color1);
+    background-color: var(--color);
+
+}
+
+header {
+
+    border: 1px solid var(--color-var);
+    box-shadow: 0 0 30px var(--color3);
+
+}
+
+header,
+main {
+    margin: 0 auto;
+}
+
+/*1. Header design*/
+.hero {
+    display: flex;
+    align-items: center;
+    flex: 1 1 100%;
+
+}
+
+/*Hamburger effect in the header */
+#menu {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    border: 0;
+    text-decoration: none;
+    color: var(--color1);
+
+
+}
+
+#menu::before {
+
+    content: "☰";
+
+}
+
+/* nav tag design */
+
+
+nav {
+    display: flex;
+    background-color: var(--color-var);
+
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.navigation li {
+    display: none;
+}
+
+
+
+.navigation a {
+    display: block;
+    color: var(--color1);
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: larger;
+
+
+}
+
+
+
+
+
+.navigation a:hover {
+    border: 1px solid var(--color3);
+    background-color: var(--color1);
+    color: var(--color3);
+    font-weight: bolder;
+    font-style: oblique;
+    transition-duration: 0.5s;
+
+
+
+
+
+}
+
+.active {
+    color: var(--color2);
+
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+
+/* When the button is clicked - the open class is toggled*/
+.show li {
+    display: block;
+
+}
+
+.active::before {
+    content: "💡";
+
+}
+/*2. Main design */
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+.card1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--color2);
+}
+.card1 img{
+    width: 50%;
+}
+
+
+/*3. Footer design*/
+
+
+footer {
+    display: flex;
+
+    align-items: center;
+  
+
+}
+
+footer img {
+    margin: 5%;
+    width: 50%;
+
+}
+
+#lastmodified {
+    color: var(--color1);}
