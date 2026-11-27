@@ -1,0 +1,85 @@
+{
+    "items": [
+        {
+            "itemName": "English Test Assistance",
+            "itemTagLine": "Business Tag Line",
+            "description ": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business1.svg",
+            "membershipLevel": "3"
+        },
+        {
+            "businessName": "Fishy",
+            "businessTagLine": "Business Tag Line",
+            "email": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business7.svg",
+            "membershipLevel": "2"
+        },
+        {
+            "businessName": "Kin Transport",
+            "businessTagLine": "Business Tag Line",
+            "email": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business3.svg",
+            "membershipLevel": "1"
+        },
+        {
+            "businessName": "Coco Juice",
+            "businessTagLine": "Business Tag Line",
+            "email": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business6.svg",
+            "membershipLevel": "3"
+        },
+        {
+            "businessName": "Express Clean",
+            "businessTagLine": "Business Tag Line",
+            "email": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business8.svg",
+            "membershipLevel": "2"
+        },
+        {
+            "businessName": "Call center service",
+            "businessTagLine": "Business Tag Line",
+            "email": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business9.svg",
+            "membershipLevel": "1"
+        },
+        {
+            "businessName": "Delivery Service",
+            "businessTagLine": "Business Tag Line",
+            "email": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business10.svg",
+            "membershipLevel": "2"
+        },
+        {
+            "businessName": "Find Your House",
+            "businessTagLine": "Business Tag Line",
+            "email": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business12.svg",
+            "membershipLevel":"1"
+        },
+        {
+            "businessName": "Grocery",
+            "businessTagLine": "Business Tag Line",
+            "email": "info@gmail.com",
+            "phone": "800-555-1234",
+            "url":"myBusiness.com",
+            "imageUrl": "https://julietteETA.github.io/wdd231/chamber/images/business5.png",
+            "membershipLevel": "3"
+        }
+    ]
+}
